@@ -528,14 +528,14 @@ header .navbar li a:hover {
     margin-bottom: 45px;
 }
 
-.form-container {
-  /*  display: flex;
+/*.form-container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #1F242d;*/
-}
+    background: #1F242d;
+}*/
 
 .contacto form {
     width: 600px;
@@ -553,8 +553,7 @@ form .input-box {
 }
 
 .field .item {
-    width: 80%;
-    
+    width: 60%;
     padding: 4px;
     background: transparent;
     border: 2px solid #029F8F;
@@ -591,11 +590,11 @@ form .textarea-field .item {
 }
 
 form .textarea-field .error-txt {
-    margin-top: -10px;
+    margin-top: -2px;
 }
 
 form button {
-    padding: 12px 32px;
+    padding: 8px 26px;
     background: #029f8f0c;
     border: solid 1pt #029F8F;
     outline: none;
