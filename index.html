@@ -35,15 +35,17 @@
     </div>
 
     <section class="inicio" id="inicio">
-        <header>
+        <header class="">
             <a href="#" class="logo">G<span>D.</span></a>
+            <div class="menuToggle" onclick="toggleMenu()"></div>
             <ul class="navbar">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">Sobre mi</a></li>
-                <li><a href="#tecnologias">Tecnologías</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+                <li><a href="#acerca" onclick="toggleMenu()">Sobre mi</a></li>
+                <li><a href="#tecnologias" onclick="toggleMenu()">Tecnologías</a></li>
+                <li><a href="#proyectos" onclick="toggleMenu()">Proyectos</a></li>
+                <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
             </ul>
+            <img src="images/moon.png" id="iconMode">
         </header>
         <div class="contenido">
             <div class="tituloBox">
@@ -74,7 +76,7 @@
                     <h2>Desarrollo Web</h2>
                 </div>
                 <div class="contenidoCard">
-                    <p>Desarrollador web con habilidades en tecnologías front-end y back-end.  Mi compromiso con el aprendizaje constante y mi entusiasmo por contribuir
+                    <p>Desarrollador web y Docente en Informática, con habilidades en tecnologías frontend y backend.  Mi compromiso con el aprendizaje constante y mi entusiasmo por contribuir
                         hacen que esté lista para aportar de manera significativa a proyectos web innovadores.</p>
                 </div>
             </div>
@@ -174,7 +176,7 @@
                             </div>
                             
                             <div class="card-content">
-                                <h2 class="name">Rick and Morty App</h2>
+                                <h2 class="name">Rick and Morty</h2>
                                 <p class="description">Permite conocer todos los personajes de Rick and Morty</p>
                                 <div class="icon-content">
                                     <a href="https://rick-and-morty-app-geraldin.netlify.app/" target="_blank" class="icon-a"><ion-icon name="open-outline"></ion-icon></a>

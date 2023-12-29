@@ -11,15 +11,34 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+
+}
+
+.dark-theme {
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
 body {
     
-    background: #061930;
+   /* background: #061930;*/
+   background: var(--primary-color);
     overflow-x: hidden;
 }
 
 section {
     padding: 100px;
 }
+
+#iconMode {
+    width: 30px;
+    cursor: pointer;
+}
+
+
 
 /* Inicio y Header */
 
@@ -46,18 +65,24 @@ header {
     transition: 0.3s;
 }
 
+
 header.sticky {
-    background: #04325B;
+    background: var(--primary-color);
     padding: 10px 100px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
+
+header ul {
+/*        flex: 1;
+        text-align:end ;*/
+    }
 
 header .logo {
     position:relative;
     font-size: 1.5em;
     text-decoration: none;
     text-transform: uppercase;
-    color: #F2F2F2;
+    color: var(--secondary-color);
     padding: 0 50px;
 }
 
@@ -80,7 +105,7 @@ header .navbar li {
 
 header .navbar li a {
     text-decoration: none;
-    color: #F2F2F2;
+    color: var(--secondary-color);
     font-weight: 600;
     padding: 4px;
     transition: 0.3s;
@@ -91,6 +116,8 @@ header .navbar li a {
 header .navbar li a:hover {
     color: #029F8F;
 }
+
+
 
 .contenido {
     position: relative;
@@ -109,7 +136,7 @@ header .navbar li a:hover {
 .contenido .tituloBox h2 {
     font-size: 3em;
     text-transform: uppercase;
-    color: #F2F2F2;
+    color: var(--secondary-color);
     line-height: 1.5;
 }
 
@@ -120,7 +147,7 @@ header .navbar li a:hover {
 
 .contenido .tituloBox h3 {
     font-weight: 800;
-    color: #F2F2F2;
+    color: var(--secondary-color);
     font-size: 1.5em;
     margin-bottom: 15px;
 }
@@ -151,7 +178,7 @@ header .navbar li a:hover {
     border-radius: 6px;
     box-shadow: 0 0 5px #029F8F;
     font-size: 16px;
-    color: #F2F2F2;
+    color: var(--secondary-color);
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
@@ -190,7 +217,7 @@ header .navbar li a:hover {
     gap: 10px;
     font-size: 18px;
     text-decoration: none;
-    color: #F2F2F2;
+    color: #029F8F;
     
     transition: all 0.3s ease;
     margin-bottom: 25px;
@@ -291,7 +318,7 @@ header .navbar li a:hover {
 .titulo-tec {
     font-size: 2.3em;
     font-weight: 800;
-    color: #F2F2F2;
+    color: var(--secondary-color);
     text-align: center;
     margin-bottom: 90px;
 }
@@ -335,9 +362,7 @@ header .navbar li a:hover {
 .image-title {
     position: absolute;
     bottom: -22px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #247736;
-    color: #ededed;
+    color: var(--secondary-color);
     left: 0;
     right: 0;
     font-weight: bold;
@@ -416,6 +441,9 @@ header .navbar li a:hover {
     height: 40px;
     width: 40px;
     background-color: #029F8F;
+    
+    
+
 }
 
 .overlay::after {
@@ -436,6 +464,7 @@ header .navbar li a:hover {
     font-size: 14px;
     font-weight: 500;
     color: #a39d9d;
+    z-index: 100;
 }
 
 .description {
@@ -493,14 +522,14 @@ header .navbar li a:hover {
     background-color: #029F8F;
 }
 
-@media scree and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .slide-content {
         margin: 0 10px;
     }
     .swiper-navBtn {
         display: none;
     }
-}
+}*/
 
 .card-image .card-img{
     height: 100%;
@@ -523,7 +552,7 @@ header .navbar li a:hover {
 .titulo-contacto {
     font-size: 2.3em;
     font-weight: 800;
-    color: #F2F2F2;
+    color: var(--secondary-color);
     text-align: center;
     margin-bottom: 45px;
 }
@@ -560,7 +589,7 @@ form .input-box {
     outline: none;
     border-radius: 6px;
     font-size: 16px;
-    color: #ededed;
+    color: var(--secondary-color);
     margin: 8px 0;
 }
 
@@ -569,7 +598,7 @@ form .input-box {
 }
 
 .field .item::placeholder {
-    color: rgba(255, 255, 255, 0.438);
+    color: rgba(126, 146, 118, 0.685);
 }
 
 .field .error-txt {
@@ -601,7 +630,7 @@ form button {
     border-radius: 6px;
     box-shadow: 0 0 7px #029F8F;
     font-size: 16px;
-    color: #F2F2F2;
+    color: var(--secondary-color);
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
@@ -624,7 +653,153 @@ footer {
 }
 
 footer p {
-    color: #F2F2F2;
+    color: var(--secondary-color);
     font-weight: 500;
     margin-bottom: 30px;
+}
+
+/* Breakpoints */
+
+@media only screen and (max-width: 1024px) {
+
+    header {
+        padding: 25px 80px;
+    }
+
+    .acerca .cards {
+        grid-gap: 80px;
+    }
+
+    .acerca .cards .card {
+        font-size: 0.9em;
+        width: 300px;
+    }
+
+    .acerca .cards .card .iconoCard {
+        font-size: 3em;
+    }
+
+    .acerca .cards .card .tituloCard h2 {
+        font-size: 1.2em;
+    }
+
+    .tecnologias .container-tecnologias {
+        grid-gap: 20px;
+    }
+    
+    .proyectos .card {
+        width: 150px;
+    }
+
+    .proyectos .slide-container {
+        margin-bottom: 100px;
+    }
+
+    .contacto form {
+        width: 450px;
+    }
+    
+}
+
+@media only screen and (max-width: 767px) {
+
+    header.sticky {
+        padding: 10px 80px;
+    }
+
+    header .navbar {
+        display: none;
+    }
+
+    header .navbar.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: var(--primary-color);
+    }
+
+    header .navbar.active li a {
+        font-size: 1.5em;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url('/images/menu.png');
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active {
+        background: url('/images/close.png');
+
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .contenido {
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0px;
+    }
+
+    .contenido .tituloBox h2 {
+        font-size: 2.5em;
+    }
+
+    .contenido .tituloBox h3 {
+        font-size: 1.2em;
+    }
+
+    .contenido .imgBox {
+        margin-top: -5px;
+    }
+
+    .tecnologias {
+        height: 600px;
+    }
+
+    .cardTecnologias {
+        margin-top: -170px;
+        gap: 2em;
+        justify-content: space-around;
+
+    }  
+
+    .imgCard{
+        
+        width: 50px;
+        height: 50px;
+    }
+
+    .tecnologias h3 {
+        font-size: 16px;
+    }
+
+    .proyectos {
+        height: 700px;
+    }
+
+    .proyectos .swiper-navBtn {
+        display: none;
+    }
+
+    .proyectos .slide-content {
+        margin: 40px 10px;
+    }
+
+    .proyectos .slide-container {
+        margin-top: -100px; 
+    } 
+
 }
